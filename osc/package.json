@@ -1,0 +1,14 @@
+{
+  "name": "osc-local-netowrk",
+  "description": "OSC (Open Sound Control)",
+  "version": "0.1.0",
+  "author": {
+    "name": "Sol Sarratea",
+    "email": "solquemal@gmail.com"
+  },
+  "dependencies": {
+    "http": "0.0.0",
+    "node-osc": "^2.0.0",
+    "socket.io": "1.4.5"
+  }
+}
