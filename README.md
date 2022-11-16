@@ -1,7 +1,8 @@
 # OSC in Local Networks
 Repository to have simple examples of how to connect devices through OSC on local private network.
 
-## Testing Local : SERVER_PORT = "localhost"
+## Testing Local : 
+SERVER_PORT = "localhost"
 
 1. Start OSC server
    Inside `/osc` : 
