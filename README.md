@@ -4,6 +4,7 @@ Repository to have simple examples of how to connect devices through OSC on loca
 **WHY?**
 
 Used for local installations/performances. 
+
 Check [MIDI&OSC](https://www.youtube.com/watch?v=begeAcU0TP4), if it's worth for your purposes :)
 
 
