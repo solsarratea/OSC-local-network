@@ -1,7 +1,19 @@
 # OSC in Local Networks
-Repository to have simple examples of how to connect devices through OSC on local private network.
+Repository to have simple examples of how to connect devices through OSC on local private network. 
 
-## Testing Local : 
+**WHY?**
+
+Used for local installations/performances. 
+Check [MIDI&OSC](https://www.youtube.com/watch?v=begeAcU0TP4), if it's worth for your purposes :)
+
+
+Inspired by [this examples](https://github.com/genekogan/p5js-osc).
+Coded with [@nacho692](https://github.com/nacho692)
+
+**THIS IS A W.I.P**
+
+
+### Testing Local : 
 SERVER_IP = "localhost"
 SERVER_PORT= 8081
 
