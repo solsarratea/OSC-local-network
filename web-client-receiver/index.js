@@ -1,6 +1,6 @@
 
-const OSC_SERVER_IP = '192.168.1.53';
-const OSC_SERVER_PORT = 8081;
+const SERVER_IP = '192.168.1.53';
+const SERVER_PORT = 8081;
 
 var socket = io.connect(`http://${SERVER_IP}:${SERVER_PORT}`,
 		{  	autoConnect: true,

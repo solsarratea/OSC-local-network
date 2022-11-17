@@ -1967,7 +1967,6 @@ WS.prototype.doOpen = function(){
   if (this.extraHeaders) {
     opts.headers = this.extraHeaders;
   }
-  console.log(uri, " | ", protocols," | ", opts )
   this.ws = false ? new WebSocket(uri) : new WebSocket(uri, protocols, opts);
 
   if (this.ws.binaryType === undefined) {

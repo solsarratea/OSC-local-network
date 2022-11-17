@@ -7,11 +7,12 @@ var oscServer;
 var sockets = new Map()
 
 oscServer = new osc.Server(BRIDGE_PORT, BRIDGE_HOST);
-oscServer.on('message', function(msg) {
-	console.log("message " + msg)
+
+
+oscServer.on('message', function (msg) {
 	sockets.forEach((v, k) => {
 		v.emit("message", msg)
-		console.log("emitting " + msg + " to " + k)
+		console.log("Emitting " + msg + " to " + k)
 		
 	});
 });

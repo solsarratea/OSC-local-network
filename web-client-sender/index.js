@@ -20,8 +20,8 @@ socket.on('connected', function ({ status, id }) {
 const button = document.getElementById("test");
 function send(dir, msg) {
 	socket.send({ type: "broadcast", content: [dir].concat(msg) });
-	console.log("send")
 }
+
 button.addEventListener('click', () => {
 	send("/test", "...you clicked!");
 })
