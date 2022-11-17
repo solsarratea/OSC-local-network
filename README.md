@@ -2,7 +2,6 @@
 Repository to have simple examples of how to connect devices through OSC on local private network. 
 Inspired by [these examples](https://github.com/genekogan/p5js-osc).
 
-## **THIS IS A W.I.P**
 
 **WHY?**
 
@@ -11,7 +10,9 @@ Used for local installations/performances.
 Check [MIDI&OSC](https://www.youtube.com/watch?v=begeAcU0TP4), if it's worth for your purposes :)
 
 
-### Testing Local : 
+### **THIS IS A W.I.P(work in progress)**
+
+## Testing Local : 
 SERVER_IP = "localhost"
 SERVER_PORT= 8081
 
