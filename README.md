@@ -1,15 +1,13 @@
 # OSC in Local Networks
 Repository to have simple examples of how to connect devices through OSC on local private network. 
+Inspired by [these examples](https://github.com/genekogan/p5js-osc).
+
 
 **WHY?**
 
 Used for local installations/performances. 
 
 Check [MIDI&OSC](https://www.youtube.com/watch?v=begeAcU0TP4), if it's worth for your purposes :)
-
-
-Inspired by [this examples](https://github.com/genekogan/p5js-osc).
-Coded with [@nacho692](https://github.com/nacho692)
 
 **THIS IS A W.I.P**
 
@@ -58,4 +56,6 @@ MAKE SURE VPNs and firewalls are off.
 
 You can also run the `client-sender.js`.
 
+<hr/>
 
+Coded with [@nacho692](https://github.com/nacho692) & tons of ♡
