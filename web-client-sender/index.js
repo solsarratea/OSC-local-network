@@ -1,11 +1,11 @@
-const OSC_SERVER_IP = '192.168.1.53';
-const OSC_SERVER_PORT = 8081;
+const SERVER_IP = '192.168.1.53';
+const SERVER_PORT = 8081;
 
 
 
-var socket = io.connect(`http://${OSC_SERVER_IP}:${OSC_SERVER_PORT}`,
+var socket = io.connect(`http://${SERVER_IP}:${SERVER_PORT}`,
 		{  	autoConnect: true,
-			port: OSC_SERVER_PORT,
+			port: SERVER_PORT,
 			transports: ['websocket'],
 			reconnectionDelayMax: 10000,
 	});
