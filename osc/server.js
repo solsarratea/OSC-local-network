@@ -1,5 +1,5 @@
 const BRIDGE_PORT = 8081;
-const BRIDGE_HOST = "localhost";
+const BRIDGE_HOST = "192.168.1.53";
 var osc = require('node-osc');
 var io = require('socket.io')(BRIDGE_PORT);
 
@@ -7,6 +7,7 @@ var oscServer;
 var sockets = new Map()
 
 oscServer = new osc.Server(BRIDGE_PORT, BRIDGE_HOST);
+
 oscServer.on('message', function(msg) {
 	console.log("message " + msg)
 	sockets.forEach((v, k) => {
@@ -23,7 +24,11 @@ io.sockets.on('connection', function (socket) {
 	socket.emit("connected", { status: 1, id: socket.id });
 	
 	socket.on("message", function (obj) {
-		console.log("message " + obj)
+		console.log("message " + obj.content)
+        if(obj.type == "broadcast"){
+            socket.broadcast.emit("message",obj.content);
+        }
+
   	});
 	
 	socket.on('disconnect', function (msg) {
