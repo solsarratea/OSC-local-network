@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDP Client</title>
+    <style>
+        html {
+            background-color: #0f0f0f;
+            align-content: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            min-width: 300px;
+            max-width: 500px;
+            padding: 1em;
+            background-color: black;
+            color: blanchedalmond;
+            border: .1em solid blanchedalmond;
+        }
+
+        button {
+            min-width: 300px;
+            max-width: 500px;
+            padding: 1em;
+            background-color:
+                black;
+            color: blanchedalmond;
+            border: .1em solid blanchedalmond;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        button:hover {
+            color:
+                black;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <p>STATUS: <i id="connection">pending</i></p>
+        <hr />
+        <button id="test">CLICK ME</button>
+    </div>
+</body>
+
+<script>
+
+    const serverIP = "127.0.0.1";  // replace with the IP address of your server machine
+    const serverPort = 56789;  // replace with the port you configured in the server
+
+    const socket = new WebSocket(`ws://${serverIP}:${serverPort}`);
+    window.connected = null;
+
+    socket.addEventListener('open', (event) => {
+        console.log('WebSocket connection opened:', event);
+        window.connected = true;
+        document.getElementById("connection").innerHTML = "Open";
+    });
+
+    socket.addEventListener('error', (event) => {
+        console.error('WebSocket error:', event);
+
+        document.getElementById("connection").innerHTML = "ERROR";
+    });
+
+    function sendMessage( message) {
+        const msg =JSON.stringify(message)
+        socket.send(msg);
+        console.log('Sent message:', msg);
+    }
+/*
+    setInterval(() => {
+        if(window.connected){
+            sendMessage("Hello, server!");
+        }
+       
+    }, 5000);
+*/
+    const button = document.getElementById("test");
+
+
+    button.addEventListener("click", ()=>sendMessage({
+        "address": '/test',
+        "content": 42
+    }));
+
+
+
+</script>
+
+</html>
